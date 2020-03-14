@@ -17,7 +17,6 @@
   const scoreLabel = document.getElementById('score');
   const missLabel = document.getElementById('miss');
 
-  target.textContent = word;
 
   function updateTarget() {
     let placeholder = '';
@@ -26,6 +25,10 @@
     }
     target.textContent = placeholder + word.substring(loc);
   }
+
+  window.addEventListener('click', () => {
+    target.textContent = word;
+  });
 
   window.addEventListener('keydown', e => {
     console.log(e.key)
